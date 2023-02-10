@@ -58,7 +58,7 @@ def sign_up():
         elif len(password1) < 5:
             flash('Password must be at least 5 characters.', category='error')
         
-        new_user = User(nom=nom, prenom=prenom,email=email, password1=generate_password_hash(password1))
+        new_user = User(nom=nom, prenom=prenom,email=email, password=generate_password_hash(password1))
             
 
         db.session.add(new_user)
