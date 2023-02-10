@@ -1,0 +1,71 @@
+{% extends "base.html" %} {% block title %}Sign Up{% endblock %} {% block
+    content %}
+    
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link rel="stylesheet" href="{{ url_for('static',filename='sign-up.css')}}">
+     
+<body>
+    <section>
+        <form   method="POST">
+             <h3 align="center">Sign Up</h3>
+            <div class="form-group">
+            <label for="nom">NOM</label>
+                        <input
+                        type="text"
+                        class="form-control"
+                        id="noml"
+                        name="nom"
+                        placeholder="Entrez votre nom"
+                        />
+            </div>
+            <div class="form-group">
+            <label for="prenom">PRENOM</label>
+                        <input
+                        type="text"
+                        class="form-control"
+                        id="prenom"
+                        name="prenom"
+                        placeholder="Entrez votre prenom"
+                    
+            </div>
+            <div class="form-group">
+            <label for="email">ADRESSE_EMAIL</label>
+                     <input
+                        type="email"
+                        class="form-control"
+                        id="email"
+                        name="email"
+                        placeholder="Entrez email"
+                        />
+            </div>
+            <div class="form-group">
+            <label for="password1">PASSWORD</label>
+                        <input
+                        type="password"
+                        class="form-control"
+                        id="password1"
+                        name="password1"
+                        placeholder="Entrez password"
+                        required
+                        />
+            </div>
+            <div class="form-group">
+            <label for="pas/>sword2">CONFIRM_PASSWORD</label>
+                        <input
+                        type="password"
+                        class="form-control"
+                        id="password2"
+                        name="password2"
+                        placeholder="Confirm password"
+                        required
+                        />
+            </div>
+            <br />
+            <button type="submit" class="btn btn-primary">Enregistrer</button>
+            <button type="reset" class="btn btn-primary">Annuler</button>
+        </form>
+    </section>
+</body>
+
+    
+{% endblock %}
